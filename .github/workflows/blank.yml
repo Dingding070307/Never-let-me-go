@@ -1,0 +1,115 @@
+import spacy
+from textblob import TextBlob
+from collections import Counter
+import re
+
+# Load spaCy's English NLP model for keyword extraction
+nlp = spacy.load('en_core_web_sm')
+
+# Function to extract keywords from a text
+def extract_keywords(text):
+    # Using spaCy to parse the text and extract nouns and proper nouns as keywords
+    doc = nlp(text)
+    keywords = [token.text for token in doc if token.pos_ in ['NOUN', 'PROPN']]
+    return keywords
+
+# Function to perform sentiment analysis on a text
+def analyze_sentiment(text):
+    blob = TextBlob(text)
+    return blob.sentiment
+
+# Sample text for sentiment analysis and keyword extraction
+sample_text = """
+    Kathy was lost in her thoughts, reflecting on her time at Hailsham. She remembered the
+    way Tommy's eyes would light up whenever they discussed their future. It all seemed so distant now, 
+    like a dream she could never truly grasp. 
+"""
+
+# Extract keywords and analyze sentiment
+keywords = extract_keywords(sample_text)
+sentiment = analyze_sentiment(sample_text)
+
+# Print out results
+print("Extracted Keywords:", keywords)
+print("Sentiment Analysis:", sentiment)
+
+# Create a simple query system for novel data
+
+# Search function
+def search_novel_data(query, novel_data):
+    results = {
+        "characters": [],
+        "settings": [],
+        "themes": [],
+        "symbols_and_motifs": [],
+        "important_moments": []
+    }
+    
+    # Search in characters
+    for character in novel_data["characters"]:
+        if query.lower() in character.name.lower() or any(query.lower() in trait.lower() for trait in character.traits):
+            results["characters"].append(character)
+    
+    # Search in settings
+    for setting in novel_data["settings"]:
+        if query.lower() in setting.location_name.lower() or query.lower() in setting.significance.lower():
+            results["settings"].append(setting)
+    
+    # Search in themes
+    for theme in novel_data["themes"]:
+        if query.lower() in theme.name.lower() or any(query.lower() in example.lower() for example in theme.examples):
+            results["themes"].append(theme)
+    
+    # Search in symbols and motifs
+    for symbol in novel_data["symbols_and_motifs"]:
+        if query.lower() in symbol.symbol.lower() or query.lower() in symbol.meaning.lower():
+            results["symbols_and_motifs"].append(symbol)
+    
+    # Search in important moments
+    for moment in novel_data["important_moments"]:
+        if query.lower() in moment.moment.lower() or query.lower() in moment.significance.lower():
+            results["important_moments"].append(moment)
+    
+    return results
+
+# Example search
+query = "memory"  # You can change this query
+search_results = search_novel_data(query, novel_data)
+
+# Display the search results
+print("\nSearch Results for:", query)
+for category, items in search_results.items():
+    print(f"\n{category.capitalize()}:")
+    for item in items:
+        print(item)
+
+# Integrating sentiment analysis and keyword extraction with the novel data
+def analyze_novel_data_for_sentiment_and_keywords(novel_data):
+    analysis = {
+        "sentiment": {},
+        "keywords": {}
+    }
+    
+    # Analyze sentiment and extract keywords for character key moments
+    for character in novel_data["characters"]:
+        character_key_moments = ' '.join(character.key_moments)
+        analysis["sentiment"][character.name] = analyze_sentiment(character_key_moments)
+        analysis["keywords"][character.name] = extract_keywords(character_key_moments)
+    
+    # Analyze sentiment and extract keywords for themes
+    for theme in novel_data["themes"]:
+        theme_examples = ' '.join(theme.examples)
+        analysis["sentiment"][theme.name] = analyze_sentiment(theme_examples)
+        analysis["keywords"][theme.name] = extract_keywords(theme_examples)
+    
+    return analysis
+
+# Perform analysis
+novel_analysis = analyze_novel_data_for_sentiment_and_keywords(novel_data)
+
+# Display analysis results
+print("\nNovel Sentiment and Keyword Analysis:")
+for category, sentiments in novel_analysis["sentiment"].items():
+    print(f"\n{category} Sentiment:", sentiments)
+for category, keywords in novel_analysis["keywords"].items():
+    print(f"\n{category} Keywords:", keywords)
