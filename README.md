@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request
+from fuzzywuzzy import fuzz, process
 
 app = Flask(__name__)
 
@@ -36,91 +37,37 @@ def search_library_data(query, library_data):
         "settings": [],
         "themes": []
     }
-    
-    # 在角色中搜索
+
+    # 在角色中搜索（模糊匹配）
     for character in library_data["characters"]:
-        if query.lower() in character["name"].lower():
+        match_score = fuzz.partial_ratio(query.lower(), character["name"].lower())
+        if match_score > 70:  # 设定一个阈值，匹配度超过70%则认为是相关结果
+            character["highlighted_name"] = highlight_match(query, character["name"])
             results["characters"].append(character)
-    
-    # 在设置中搜索
+
+    # 在设置中搜索（模糊匹配）
     for setting in library_data["settings"]:
-        if query.lower() in setting["location_name"].lower():
+        match_score = fuzz.partial_ratio(query.lower(), setting["location_name"].lower())
+        if match_score > 70:
+            setting["highlighted_name"] = highlight_match(query, setting["location_name"])
             results["settings"].append(setting)
-    
-    # 在主题中搜索
+
+    # 在主题中搜索（模糊匹配）
     for theme in library_data["themes"]:
-        if query.lower() in theme["name"].lower():
+        match_score = fuzz.partial_ratio(query.lower(), theme["name"].lower())
+        if match_score > 70:
+            theme["highlighted_name"] = highlight_match(query, theme["name"])
             results["themes"].append(theme)
-    
+
     return results
+
+def highlight_match(query, text):
+    """高亮显示匹配的查询部分"""
+    start = text.lower().find(query.lower())
+    if start != -1:
+        end = start + len(query)
+        return text[:start] + "<mark>" + text[start:end] + "</mark>" + text[end:]
+    return text
 
 if __name__ == '__main__':
     app.run(debug=True)
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Library Search</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
-</head>
-<body>
-    <h1>Library Search</h1>
-    <form action="/search" method="POST">
-        <input type="text" name="query" placeholder="Search for a character, theme, or setting" required>
-        <button type="submit">Search</button>
-    </form>
-</body>
-</html>
-
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
-    color: #333;
-    margin: 0;
-    padding: 0;
-}
-
-h1, h2, h3 {
-    color: #2c3e50;
-}
-
-form {
-    margin-top: 20px;
-    text-align: center;
-}
-
-input[type="text"] {
-    padding: 8px;
-    width: 300px;
-    font-size: 16px;
-}
-
-button {
-    padding: 8px 16px;
-    font-size: 16px;
-    background-color: #3498db;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #2980b9;
-}
-
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-li {
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
-}
-
-p {
-    font-size: 14px;
-    color: #7f8c8d;
-}
