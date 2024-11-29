@@ -1,73 +1,124 @@
-from flask import Flask, render_template, request
-from fuzzywuzzy import fuzz, process
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analysis of Never Let Me Go</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Analysis of Never Let Me Go</h1>
+        <input type="text" id="searchInput" onkeyup="searchContent()" placeholder="Search for information...">
+    </header>
+    <main>
+        <section id="content">
+            <h2>1. Setting</h2>
+            <div class="content-item" data-keywords="Hailsham, setting, education, fate">
+                <h3>Hailsham School</h3>
+                <p><strong>Meaning:</strong> Hailsham School is the main setting of the story. While it appears to be a typical boarding school, as the story progresses, the dark truth about its purpose is revealed.</p>
+                <p><strong>Direct Quote:</strong> "We were taught to be... creative... But not about the world we were in." — Kathy H.</p>
+                <p><strong>Impact:</strong> Hailsham symbolizes a false sense of protection, hiding the true nature of the students' identity. It shapes the main characters' thoughts and behavior, especially their feelings of helplessness and acceptance when confronted with death.</p>
+            </div>
 
-app = Flask(__name__)
+            <div class="content-item" data-keywords="lake, boat, freedom, escape, fate">
+                <h3>The Lake and the Boat</h3>
+                <p><strong>Meaning:</strong> The lake and the boat are important symbols in the novel, particularly as Kathy and Tommy try to understand their identity.</p>
+                <p><strong>Direct Quote:</strong> "It was like a dream... the boat was always there, but we never really got anywhere." — Kathy H.</p>
+                <p><strong>Impact:</strong> The lake and boat symbolize the inner struggles of the characters and their inability to attain true freedom. They serve as a reminder that no matter how much they wish to escape or change their fate, they are unable to avoid their ultimate destiny.</p>
+            </div>
 
-# 模拟数据（可以根据需要动态从数据库加载数据）
-library_data = {
-    "characters": [
-        {"name": "Kathy", "traits": ["reflective", "sensitive"], "relationships": ["Tommy", "Ruth"], "motivations": ["memory", "identity"], "key_moments": ["Reflects on her time at Hailsham", "Sees the tragic end of her classmates"]},
-        {"name": "Tommy", "traits": ["impulsive", "passionate"], "relationships": ["Kathy", "Ruth"], "motivations": ["love", "self-discovery"], "key_moments": ["Fights with Kathy", "Discovers the truth about their future"]},
-        {"name": "Ruth", "traits": ["manipulative", "dominant"], "relationships": ["Kathy", "Tommy"], "motivations": ["control", "desire"], "key_moments": ["Manipulates Kathy and Tommy's relationship", "Realizes the consequences of her actions"]}
-    ],
-    "settings": [
-        {"location_name": "Hailsham", "significance": "The boarding school where the characters grow up, symbolizing their lost innocence."},
-        {"location_name": "The Cottages", "significance": "A place of transition where the characters are forced to confront their future."}
-    ],
-    "themes": [
-        {"name": "Memory", "examples": ["Kathy constantly reflects on her past at Hailsham.", "The characters' memories shape their understanding of their identity."]},
-        {"name": "Identity", "examples": ["The characters struggle with the concept of self, as they are created for a specific purpose."]},
-        {"name": "Mortality", "examples": ["The looming knowledge of their future deaths affects how the characters live."]}
-    ]
+            <h2>2. Characters</h2>
+            <div class="content-item" data-keywords="Kathy, Tommy, Ruth, characters, relationships">
+                <h3>Kathy H.</h3>
+                <p><strong>Characteristics:</strong> Reflective, emotional, and introspective.</p>
+                <p><strong>Motivation:</strong> Kathy seeks to understand and come to terms with her past, and her relationship with Tommy and Ruth.</p>
+                <p><strong>Key Moment:</strong> "I think I was always looking for that thing, that moment when it would all be sorted out." — Kathy H.</p>
+            </div>
+
+            <h2>3. Themes</h2>
+            <div class="content-item" data-keywords="memory, identity, death, ethics, science">
+                <h3>Memory</h3>
+                <p>Kathy narrates the story through memories, and memory plays a crucial role in the novel, revealing the emotional and self-reflective nature of the characters.</p>
+            </div>
+
+            <h2>4. Key Moments</h2>
+            <div class="content-item" data-keywords="Kathy, Tommy, Ruth, key moments">
+                <h3>Ruth's Confession</h3>
+                <p>Ruth admits the failure of her relationship with Tommy and realizes that she will never change her fate.</p>
+            </div>
+
+            <h2>5. Questions</h2>
+            <div class="content-item" data-keywords="questions, fate, identity">
+                <h3>Why do the characters so passively accept their fate?</h3>
+                <p>Is their sense of helplessness due to the lack of choice, or is it a deep-seated acquiescence within themselves?</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 Analysis of Never Let Me Go</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
 }
 
-@app.route('/')
-def index():
-    return render_template('index.html')
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+}
 
-@app.route('/search', methods=['GET', 'POST'])
-def search():
-    query = request.form.get('query')
-    results = search_library_data(query, library_data)
-    return render_template('search_results.html', results=results, query=query)
+#searchInput {
+    width: 50%;
+    padding: 8px;
+    margin-top: 10px;
+    font-size: 16px;
+}
 
-def search_library_data(query, library_data):
-    results = {
-        "characters": [],
-        "settings": [],
-        "themes": []
-    }
+main {
+    margin: 20px;
+}
 
-    # 在角色中搜索（模糊匹配）
-    for character in library_data["characters"]:
-        match_score = fuzz.partial_ratio(query.lower(), character["name"].lower())
-        if match_score > 70:  # 设定一个阈值，匹配度超过70%则认为是相关结果
-            character["highlighted_name"] = highlight_match(query, character["name"])
-            results["characters"].append(character)
+h1, h2, h3 {
+    color: #333;
+}
 
-    # 在设置中搜索（模糊匹配）
-    for setting in library_data["settings"]:
-        match_score = fuzz.partial_ratio(query.lower(), setting["location_name"].lower())
-        if match_score > 70:
-            setting["highlighted_name"] = highlight_match(query, setting["location_name"])
-            results["settings"].append(setting)
+.content-item {
+    margin: 10px 0;
+    background-color: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
 
-    # 在主题中搜索（模糊匹配）
-    for theme in library_data["themes"]:
-        match_score = fuzz.partial_ratio(query.lower(), theme["name"].lower())
-        if match_score > 70:
-            theme["highlighted_name"] = highlight_match(query, theme["name"])
-            results["themes"].append(theme)
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+}
 
-    return results
+function searchContent() {
+    const input = document.getElementById("searchInput");
+    const filter = input.value.toLowerCase();
+    const items = document.querySelectorAll(".content-item");
 
-def highlight_match(query, text):
-    """高亮显示匹配的查询部分"""
-    start = text.lower().find(query.lower())
-    if start != -1:
-        end = start + len(query)
-        return text[:start] + "<mark>" + text[start:end] + "</mark>" + text[end:]
-    return text
-
-if __name__ == '__main__':
-    app.run(debug=True)
+    items.forEach(item => {
+        const keywords = item.getAttribute("data-keywords").toLowerCase();
+        if (keywords.includes(filter)) {
+            item.style.display = "";
+        } else {
+            item.style.display = "none";
+        }
+    });
+}
