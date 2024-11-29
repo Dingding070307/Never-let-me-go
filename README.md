@@ -17,6 +17,7 @@
             <div class="content-item" data-keywords="Hailsham, setting, education, fate">
                 <h3>Hailsham School</h3>
                 <p><strong>Meaning:</strong> Hailsham School is the main setting of the story. While it appears to be a typical boarding school, as the story progresses, the dark truth about its purpose is revealed.</p>
+                <img src="hailsham-image.jpg" alt="Hailsham School" class="content-image">
                 <p><strong>Direct Quote:</strong> "We were taught to be... creative... But not about the world we were in." — Kathy H.</p>
                 <p><strong>Impact:</strong> Hailsham symbolizes a false sense of protection, hiding the true nature of the students' identity. It shapes the main characters' thoughts and behavior, especially their feelings of helplessness and acceptance when confronted with death.</p>
             </div>
@@ -24,6 +25,7 @@
             <div class="content-item" data-keywords="lake, boat, freedom, escape, fate">
                 <h3>The Lake and the Boat</h3>
                 <p><strong>Meaning:</strong> The lake and the boat are important symbols in the novel, particularly as Kathy and Tommy try to understand their identity.</p>
+                <img src="lake-boat-image.jpg" alt="The Lake and Boat" class="content-image">
                 <p><strong>Direct Quote:</strong> "It was like a dream... the boat was always there, but we never really got anywhere." — Kathy H.</p>
                 <p><strong>Impact:</strong> The lake and boat symbolize the inner struggles of the characters and their inability to attain true freedom. They serve as a reminder that no matter how much they wish to escape or change their fate, they are unable to avoid their ultimate destiny.</p>
             </div>
@@ -101,24 +103,17 @@ h1, h2, h3 {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+.content-image {
+    width: 100%; /* Adjusts the image to the width of the container */
+    max-width: 600px; /* Limits the width for large images */
+    height: auto;
+    display: block;
+    margin: 10px 0; /* Adds space around the image */
+}
+
 footer {
     text-align: center;
     padding: 10px;
     background-color: #4CAF50;
     color: white;
-}
-
-function searchContent() {
-    const input = document.getElementById("searchInput");
-    const filter = input.value.toLowerCase();
-    const items = document.querySelectorAll(".content-item");
-
-    items.forEach(item => {
-        const keywords = item.getAttribute("data-keywords").toLowerCase();
-        if (keywords.includes(filter)) {
-            item.style.display = "";
-        } else {
-            item.style.display = "none";
-        }
-    });
 }
