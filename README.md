@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<Never let me go>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -51,7 +51,7 @@
             <h2>5. Questions</h2>
             <div class="content-item" data-keywords="questions, fate, identity">
                 <h3>Why do the characters so passively accept their fate?</h3>
-                <p>Is their sense of helplessness due to the lack of choice, or is it a deep-seated acquiescence within themselves?</p>
+                <p>Their sense of helplessness may stem from a lack of choice imposed on them, or perhaps it reflects an ingrained acceptance of their predetermined destiny.</p>
             </div>
         </section>
     </main>
@@ -60,50 +60,20 @@
         <p>© 2024 Analysis of Never Let Me Go</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        function searchContent() {
+            const input = document.getElementById('searchInput').value.toLowerCase();
+            const items = document.querySelectorAll('.content-item');
+
+            items.forEach(item => {
+                const keywords = item.getAttribute('data-keywords').toLowerCase();
+                if (keywords.includes(input)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+    </script>
 </body>
 </html>
-
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-}
-
-header {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    text-align: center;
-}
-
-#searchInput {
-    width: 50%;
-    padding: 8px;
-    margin-top: 10px;
-    font-size: 16px;
-}
-
-main {
-    margin: 20px;
-}
-
-h1, h2, h3 {
-    color: #333;
-}
-
-.content-item {
-    margin: 10px 0;
-    background-color: white;
-    padding: 10px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #4CAF50;
-    color: white;
-}
