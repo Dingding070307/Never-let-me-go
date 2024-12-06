@@ -40,7 +40,7 @@
             <h2>3. Themes</h2>
 
             <h3>Friendship</h3>
-            <p>The setting of the story is school, where friendship is essential to constitute the setting. In this case, the narrator, Kathy, illustrates her campus life. During the process, she and her friends Ruth and Tommy are tested by the experiences they go through.</p>
+            <p>The setting of the story is school. Friendship is essential to constitute the setting. In this case, the narrator, Kathy, illustrates her campus life. During the process, she and her friends Ruth and Tommy are tested by the experiences they go through.</p>
 
             <h3>Gender</h3>
             <p>Cloning children do not have traditional emotions or feelings. During the growing process, they gradually realize the differences between male and female. Moreover, they come to understand that they cannot have children because they are clones.</p>
@@ -55,6 +55,7 @@
 
             <h3>Ruth's Confession</h3>
             <p>Ruth admits the failure of her relationship with Tommy and realizes that she will never change her fate. This moment is crucial for understanding Ruth's internal struggle and her acceptance of her predetermined future.</p>
+
         </section>
     </main>
 
