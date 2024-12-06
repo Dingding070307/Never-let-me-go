@@ -44,7 +44,7 @@
                 <p><strong>Impact:</strong> Memory allows Kathy to revisit and reflect on her past, and it gives the reader insight into the emotional weight of her experiences.</p>
             </div>
 
-            <h2>4. Key Moments</h2>
+            <h2>4. Key Moments (Chapter 10)</h2>
             <div class="content-item" data-keywords="Kathy, Tommy, Ruth, key moments">
                 <h3>Ruth's Confession</h3>
                 <p>Ruth admits the failure of her relationship with Tommy and realizes that she will never change her fate. This moment is pivotal for understanding Ruth's internal struggle and acceptance of her predetermined future.</p>
@@ -55,7 +55,7 @@
             <div class="content-item" data-keywords="questions, fate, identity">
                 <h3>Why do the characters so passively accept their fate?</h3>
                 <p>Their sense of helplessness may stem from a lack of choice imposed on them, or perhaps it reflects an ingrained acceptance of their predetermined destiny. The novel explores how their lives are shaped by forces beyond their control.</p>
-                <p><strong>Direct Quote:</strong> "We lived in a world where things could only end one way." — Kathy H. (Chapter 12, Page 162)</p>
+                <p><strong>Direct Quote:</strong> "We lived in a world where things could only end one way." — Kathy H. (Chapter 10, Page 162)</p>
             </div>
         </section>
     </main>
