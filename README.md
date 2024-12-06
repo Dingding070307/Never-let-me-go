@@ -42,14 +42,14 @@
                 <h3>Tommy</h3>
                 <p><strong>Characteristics:</strong> Testiness, immaturity.</p>
                 <p><strong>Motivation:</strong> He is a proactive boy who always worries about his art talent and wants to be involved in group activities.</p>
-                <p><strong>Relevant Quote:</strong> “But seriously, Kath. No hard feelings, right? I’m awfully sorry. I am, honestly.” — Tommy (p.13)</p>
+                <p><strong>Relevant Quote:</strong> “But seriously, Kath. No hard feelings, right? I’m awfully sorry. I am, honestly.” — Tommy (p.13) [Stage when Tommy becomes more mature]</p>
             </div>
 
             <h2>3. Themes</h2>
 
-            <div class="content-item" data-keywords="friendship, gender, cloning">
+            <div class="content-item" data-keywords="friendship, school, relationship, campus life">
                 <h3>Friendship</h3>
-                <p>The setting of the story is a school, where friendship is essential. Kathy, the narrator, illustrates her campus life and her evolving relationship with Ruth and Tommy, showing how their friendship is tested by the events around them.</p>
+                <p>The setting of the story is school, where friendship is essential. Kathy, the narrator, illustrates her campus life and her evolving relationship with Ruth and Tommy, showing how their friendship is tested by the events around them.</p>
             </div>
 
             <div class="content-item" data-keywords="gender, cloning, emotions">
