@@ -40,28 +40,21 @@
             <h2>3. Themes</h2>
 
             <h3>Friendship</h3>
-            <p>The setting of the story is school, where friendship is essential. Kathy, the narrator, illustrates her campus life and her evolving relationship with Ruth and Tommy, showing how their friendship is tested by the events around them.</p>
+            <p>The setting of the story is school, where friendship is essential to constitute the setting. In this case, the narrator, Kathy, illustrates her campus life. During the process, she and her friends Ruth and Tommy are tested by the experiences they go through.</p>
 
             <h3>Gender</h3>
-            <p>The story explores how cloning children, who do not have traditional emotions or feelings, gradually become aware of the differences between males and females. They also realize they cannot have children because they are clones.</p>
+            <p>Cloning children do not have traditional emotions or feelings. During the growing process, they gradually realize the differences between male and female. Moreover, they come to understand that they cannot have children because they are clones.</p>
 
             <h2>4. Key Moments</h2>
 
             <h3>Prelude of Kathy’s Memory</h3>
-            <p>In the first chapter, Kathy begins to sort through her memories, trying to find something she feels she has lost.</p>
+            <p>In the first chapter, Kathy starts to sort through her memories, trying to find something she lost.</p>
 
             <h3>Group Bullying Tommy</h3>
-            <p>When the children were 12, seniors assembled to bully Tommy. Kathy and Ruth are witnesses. In this event, Tommy’s immaturity and explosive personality are exposed, marking his early emotional struggles.</p>
+            <p>When the children were 12, seniors assembled to bully Tommy. Kathy and Ruth are witnesses. In this event, Tommy’s immaturity and explosive personality are exposed, marking the beginning of his emotional struggles.</p>
 
             <h3>Ruth's Confession</h3>
-            <p>Ruth admits the failure of her relationship with Tommy and realizes that she will never change her fate. This moment highlights her acceptance of the inevitable future that awaits her and the other clones.</p>
-
-            <h2>5. Questions</h2>
-            <div class="content-item" data-keywords="questions, fate, identity">
-                <h3>Why do the characters so passively accept their fate?</h3>
-                <p>Their sense of helplessness may stem from a lack of choice imposed on them, or perhaps it reflects an ingrained acceptance of their predetermined destiny. The novel explores how their lives are shaped by forces beyond their control.</p>
-                <p><strong>Direct Quote:</strong> "We lived in a world where things could only end one way." — Kathy H. (Chapter 10, Page 162)</p>
-            </div>
+            <p>Ruth admits the failure of her relationship with Tommy and realizes that she will never change her fate. This moment is crucial for understanding Ruth's internal struggle and her acceptance of her predetermined future.</p>
         </section>
     </main>
 
