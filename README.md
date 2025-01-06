@@ -96,29 +96,45 @@
                     "I won’t be a carer any more come the end of the year… I’ll have Hailsham with me, safely in my head." (Page 274)<br>
                     <strong>Explanation:</strong> Kathy’s attachment to Hailsham reflects its lasting impact as a source of identity, even as she faces the inevitability of her fate.
                 </p>
-            </div>
-            <div class="content">
                 <h3>Fields</h3>
                 <p>
                     "You know, Kath, when I used to play football back at Hailsham. I had this secret thing I did… splash, splash, splash." (Page 273)<br>
                     <strong>Explanation:</strong> Tommy’s memory of football at Hailsham symbolizes innocence and fleeting moments of joy before facing their grim destinies.
                 </p>
-            </div>
-            <div class="content">
                 <h3>The Pond</h3>
                 <p>
                     "Kath, I’ll tell you about it. I’ll be down at the pond after lunch. If you come down there, I’ll tell you." (Page 24)<br>
                     <strong>Explanation:</strong> The pond serves as a meeting point for private and meaningful conversations, reflecting the characters’ need for connection and trust.
                 </p>
-            </div>
-            <div class="content">
                 <h3>The Gallery</h3>
                 <p>
                     "We came in to find the woman we’d been following talking to a much older woman with silver hair, who seemed to be in charge of the place…" (Page 154)<br>
                     <strong>Explanation:</strong> The gallery’s peaceful and artistic setting contrasts with the clones’ harsh reality, symbolizing hope and identity tied to creativity and self-expression.
                 </p>
+                <h3>Dorm</h3>
+                <p>
+                    "The door was almost half open—it was a sort of rule we couldn’t close dorm doors completely except for when we were sleeping." (Page 69)<br>
+                    <strong>Explanation:</strong> This rule emphasizes the lack of privacy and control over personal space at Hailsham, symbolizing the broader lack of autonomy the students face in their lives.
+                </p>
+                <p>
+                    "We were lying in the dark in our dorm. In the Juniors, we were fifteen to a dorm, so didn’t tend to have the sort of long intimate conversations we did once we got to the Senior dorms." (Page 33)<br>
+                    <strong>Explanation:</strong> The dorm environment fosters group bonding, yet the lack of privacy also limits genuine personal interactions, mirroring the students’ constrained lives.
+                </p>
+                <p>
+                    "In the Seniors, we were down to six per dorm, so it was just our little group, and we often had our most intimate conversations lying in the dark before we fell asleep." (Page 16)<br>
+                    <strong>Explanation:</strong> The smaller Senior dorm groups allowed for more private and meaningful discussions, contrasting with the larger, impersonal Junior dorms.
+                </p>
+                <h3>Pavilion</h3>
+                <p>
+                    "The pavilion had become the place to hide out with your best friends when you wanted to get away from the rest of Hailsham." (Page 7)<br>
+                    <strong>Explanation:</strong> The pavilion symbolizes a place of safety and nostalgia, contrasting with their grim futures.
+                </p>
+                <p>
+                    "We loved our sports pavilion, maybe because it reminded us of those sweet little cottages people always had in picture books when we were young." (Page 7)<br>
+                    <strong>Explanation:</strong> The setting emphasizes the innocence of their childhood and highlights the tragedy of their loss of freedom.
+                </p>
+                <!-- Continue inserting all additional settings, themes, and quotes here -->
             </div>
-            <!-- Additional sections can be appended here following the same structure -->
         </section>
     </div>
 </body>
