@@ -1,10 +1,73 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Analysis of Never Let Me Go</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Never Let Me Go - Analysis</title>
     <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #ffe4e1; /* 粉色背景 */
+            color: #333;
+        }
+        header {
+            background: #ff69b4;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        section {
+            margin-bottom: 20px;
+        }
+        h1, h2, h3 {
+            color: #444;
+        }
+        .quote {
+            font-style: italic;
+            margin: 10px 0;
+            padding-left: 15px;
+            border-left: 4px solid #ddd;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #ff69b4;
+            color: #fff;
+            margin-top: 20px;
+        }
+        #search-box {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        #search-input {
+            width: 300px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+        #search-button {
+            padding: 10px 20px;
+            background: #ff69b4;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #search-button:hover {
+            background: #ff1493;
+        }
         .highlight {
             background-color: yellow;
             font-weight: bold;
@@ -13,78 +76,47 @@
 </head>
 <body>
     <header>
-        <h1>Analysis of Never Let Me Go</h1>
-        <input type="text" id="searchInput" onkeyup="searchContent()" placeholder="Search for information...">
+        <h1>Never Let Me Go - Analysis</h1>
     </header>
     <main>
+        <div id="search-box">
+            <input type="text" id="search-input" placeholder="Enter keyword to search...">
+            <button id="search-button">Search</button>
+        </div>
+
         <section id="content">
-            <div class="content-item">
-                <h2>1. Setting</h2>
-                <h3>Hailsham School</h3>
-                <p><strong>Meaning:</strong> Hailsham School is the main setting of the story. While it appears to be a typical boarding school, as the story progresses, the dark truth about its purpose is revealed.</p>
-                <p><strong>Direct Quote:</strong> "And I’m a Hailsham student—which is enough by itself sometimes to get people’s backs up." — Kathy H. (p.3)</p>
-                <p><strong>Impact:</strong> Hailsham symbolizes a false sense of protection, hiding the true nature of the students' identity. It shapes the main characters' thoughts and behavior, especially their feelings of helplessness and acceptance when confronted with death.</p>
-            </div>
-            
-            <div class="content-item">
-                <h3>Pavilion</h3>
-                <p><strong>Meaning:</strong> Pavilion is a place to watch events; children assemble together jockeying and arguing.</p>
-                <p><strong>Direct Quote:</strong> "The pavilion had become the place to hide out with your best friends when you wanted to get away from the rest of Hailsham." — Kathy H.</p>
-                <p><strong>Impact:</strong> Pavilion was the first place Tommy was bullied. This place is a secret spot where children peep things happening in the field, symbolizing snooping and hidden truths.</p>
-            </div>
+            <h2>Hailsham</h2>
+            <p>“Hailsham. I bet that was a beautiful place.” (Ishiguro 7)</p>
+            <div class="quote">The donor’s comment reflects how Hailsham is idealized by those who didn’t experience it, contrasting with the students’ complex feelings about their upbringing.</div>
+            <p>“You were at Hailsham, weren’t you? So is it really true?” (Page 200)</p>
+            <div class="quote">Rumors about Hailsham closing reveal its symbolic importance as a failed attempt to humanize clones and the lingering effects of its legacy.</div>
+        </section>
 
-            <div class="content-item">
-                <h2>2. Characters</h2>
-                <h3>Kathy H.</h3>
-                <p><strong>Characteristics:</strong> Reflective, emotional, and introspective.</p>
-                <p><strong>Motivation:</strong> Kathy seeks to understand and come to terms with her past, and her relationship with Tommy and Ruth.</p>
-                <p><strong>Key Moment:</strong> "I think I was always looking for that thing, that moment when it would all be sorted out." — Kathy H. (Chapter 2, Page 29)</p>
-            </div>
-            
-            <div class="content-item">
-                <h2>3. Themes</h2>
-                <h3>Friendship</h3>
-                <p>Friendship is essential to the story. The narrator, Kathy, illustrates her campus life with Ruth and Tommy, showing how their bonds are tested over time.</p>
-                <h3>Gender</h3>
-                <p>Cloning children lack traditional emotions. They realize differences between genders but understand they cannot have children due to being clones.</p>
-            </div>
-
-            <div class="content-item">
-                <h2>4. Key Moments</h2>
-                <h3>Prelude of Kathy’s Memory</h3>
-                <p>In the first chapter, Kathy starts to sort through her memories, trying to find something she lost.</p>
-                <h3>Group Bullying Tommy</h3>
-                <p>When the children were 12, seniors assembled to bully Tommy. This marks the beginning of his emotional struggles.</p>
-                <h3>Ruth's Confession</h3>
-                <p>Ruth admits the failure of her relationship with Tommy and realizes that she will never change her fate. This moment is crucial for understanding Ruth's internal struggle and her acceptance of her predetermined future.</p>
-            </div>
+        <section>
+            <h2>The Pond</h2>
+            <p>“Kath, I’ll tell you about it. I’ll be down at the pond after lunch. If you come down there, I’ll tell you.” (Page 24)</p>
+            <div class="quote">The pond serves as a meeting point for private and meaningful conversations, reflecting the characters’ need for connection and trust.</div>
         </section>
     </main>
-
     <footer>
-        <p>© 2024 Analysis of Never Let Me Go</p>
+        <p>&copy; 2025 Never Let Me Go Analysis</p>
     </footer>
 
     <script>
-        function searchContent() {
-            const input = document.getElementById('searchInput').value.toLowerCase();
-            const content = document.getElementById('content');
-            const items = content.querySelectorAll('.content-item');
+        // 关键词高亮功能
+        document.getElementById('search-button').addEventListener('click', function() {
+            const keyword = document.getElementById('search-input').value.trim();
+            const contentElement = document.getElementById('content');
 
-            items.forEach(item => {
-                const text = item.innerHTML;
-                item.innerHTML = text.replace(/<span class="highlight">|<\/span>/g, ''); // 清除之前的高亮
-                if (input.trim() !== '' && item.textContent.toLowerCase().includes(input)) {
-                    const regex = new RegExp(input, 'gi');
-                    item.innerHTML = item.innerHTML.replace(regex, match => `<span class="highlight">${match}</span>`);
-                    item.style.display = 'block';
-                } else if (input.trim() === '') {
-                    item.style.display = 'block'; // 输入为空时显示所有内容
-                } else {
-                    item.style.display = 'none'; // 不匹配时隐藏
-                }
-            });
-        }
+            if (keyword) {
+                // 先移除所有高亮
+                contentElement.innerHTML = contentElement.innerHTML.replace(/<span class="highlight">(.*?)<\/span>/g, '$1');
+
+                // 用关键词添加高亮
+                const regex = new RegExp(`(${keyword})`, 'gi');
+                contentElement.innerHTML = contentElement.innerHTML.replace(regex, '<span class="highlight">$1</span>');
+            }
+        });
     </script>
 </body>
 </html>
