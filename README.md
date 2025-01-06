@@ -3,124 +3,123 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Never Let Me Go - Analysis</title>
+    <title>Never Let Me Go - Notes</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            line-height: 1.6;
+            background: linear-gradient(to bottom, #e0f7fa, #bbdefb);
             margin: 0;
-            padding: 0;
-            background: linear-gradient(to bottom, #ffdde1, #aec6ff); /* 粉蓝渐变背景 */
+            padding: 20px;
             color: #333;
         }
-        header {
-            background: #ff69b4;
-            color: #fff;
-            padding: 10px 20px;
-            text-align: center;
-        }
-        main {
-            padding: 20px;
-            max-width: 800px;
+        .container {
+            max-width: 1200px;
             margin: auto;
             background: #fff;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: 20px;
             border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
-        section {
-            margin-bottom: 20px;
-        }
-        h1, h2, h3 {
-            color: #444;
-        }
-        .quote {
-            font-style: italic;
-            margin: 10px 0;
-            padding-left: 15px;
-            border-left: 4px solid #ddd;
-        }
-        footer {
-            text-align: center;
-            padding: 10px;
-            background: #ff69b4;
-            color: #fff;
-            margin-top: 20px;
-        }
-        #search-box {
+        .search-bar {
             display: flex;
             justify-content: center;
             margin-bottom: 20px;
         }
-        #search-input {
-            width: 300px;
+        .search-bar input {
+            width: 80%;
             padding: 10px;
+            font-size: 16px;
             border: 1px solid #ccc;
-            border-radius: 5px;
-            margin-right: 10px;
+            border-radius: 4px;
+            outline: none;
         }
-        #search-button {
-            padding: 10px 20px;
-            background: #ff69b4;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        #search-button:hover {
-            background: #ff1493;
+        .search-bar input:focus {
+            border-color: #64b5f6;
+            box-shadow: 0 0 5px rgba(100, 181, 246, 0.5);
         }
         .highlight {
-            background-color: yellow;
-            font-weight: bold;
+            background-color: #ffeb3b;
+            padding: 2px;
+            border-radius: 4px;
+        }
+        h1, h2 {
+            text-align: center;
+            color: #1a237e;
+        }
+        section {
+            margin-bottom: 40px;
+        }
+        section h3 {
+            color: #01579b;
+        }
+        section p {
+            line-height: 1.6;
         }
     </style>
+    <script>
+        function highlightKeywords() {
+            const searchInput = document.getElementById('search').value.toLowerCase();
+            const content = document.querySelectorAll('.content');
+
+            content.forEach(paragraph => {
+                const text = paragraph.textContent.toLowerCase();
+                if (text.includes(searchInput) && searchInput.trim() !== "") {
+                    const regex = new RegExp(`(${searchInput})`, 'gi');
+                    paragraph.innerHTML = paragraph.textContent.replace(regex, '<span class="highlight">$1</span>');
+                } else {
+                    paragraph.innerHTML = paragraph.textContent;
+                }
+            });
+        }
+    </script>
 </head>
 <body>
-    <header>
-        <h1>Never Let Me Go - Analysis</h1>
-    </header>
-    <main>
-        <div id="search-box">
-            <input type="text" id="search-input" placeholder="Enter keyword to search...">
-            <button id="search-button">Search</button>
+    <div class="container">
+        <h1>Never Let Me Go - Study Notes</h1>
+        <div class="search-bar">
+            <input type="text" id="search" placeholder="Search for keywords..." oninput="highlightKeywords()">
         </div>
 
-        <section id="content">
-            <h2>Hailsham</h2>
-            <p><strong>“Hailsham. I bet that was a beautiful place.”</strong> (Ishiguro 7)</p>
-            <div class="quote">The donor’s comment reflects how Hailsham is idealized by those who didn’t experience it, contrasting with the students’ complex feelings about their upbringing.</div>
-            <p><strong>“You were at Hailsham, weren’t you? So is it really true?”</strong> (Page 200)</p>
-            <div class="quote">Rumors about Hailsham closing reveal its symbolic importance as a failed attempt to humanize clones and the lingering effects of its legacy.</div>
-
-            <h2>The Pond</h2>
-            <p><strong>“Kath, I’ll tell you about it. I’ll be down at the pond after lunch. If you come down there, I’ll tell you.”</strong> (Page 24)</p>
-            <div class="quote">The pond serves as a meeting point for private and meaningful conversations, reflecting the characters’ need for connection and trust.</div>
-
-            <h2>Characters</h2>
-            <h3>Kathy H.</h3>
-            <p><strong>“My name is Kathy H. I’m thirty-one years old, and I’ve been a carer now for over eleven years.”</strong> (Page 4)</p>
-            <div class="quote">Kathy’s introduction highlights her reflective and empathetic personality. Her role as a carer emphasizes her dedication to helping others, while also foreshadowing her eventual fate.</div>
+        <section>
+            <h2>Settings</h2>
+            <div class="content">
+                <h3>Hailsham</h3>
+                <p>
+                    "Hailsham. I bet that was a beautiful place." (Page 7)<br>
+                    <strong>Explanation:</strong> The donor’s comment reflects how Hailsham is idealized by those who didn’t experience it, contrasting with the students’ complex feelings about their upbringing.
+                </p>
+                <p>
+                    "You were at Hailsham, weren’t you? So is it really true?" (Page 200)<br>
+                    <strong>Explanation:</strong> Rumors about Hailsham closing reveal its symbolic importance as a failed attempt to humanize clones and the lingering effects of its legacy.
+                </p>
+                <p>
+                    "I won’t be a carer any more come the end of the year… I’ll have Hailsham with me, safely in my head." (Page 274)<br>
+                    <strong>Explanation:</strong> Kathy’s attachment to Hailsham reflects its lasting impact as a source of identity, even as she faces the inevitability of her fate.
+                </p>
+            </div>
+            <div class="content">
+                <h3>Fields</h3>
+                <p>
+                    "You know, Kath, when I used to play football back at Hailsham. I had this secret thing I did… splash, splash, splash." (Page 273)<br>
+                    <strong>Explanation:</strong> Tommy’s memory of football at Hailsham symbolizes innocence and fleeting moments of joy before facing their grim destinies.
+                </p>
+            </div>
+            <div class="content">
+                <h3>The Pond</h3>
+                <p>
+                    "Kath, I’ll tell you about it. I’ll be down at the pond after lunch. If you come down there, I’ll tell you." (Page 24)<br>
+                    <strong>Explanation:</strong> The pond serves as a meeting point for private and meaningful conversations, reflecting the characters’ need for connection and trust.
+                </p>
+            </div>
+            <div class="content">
+                <h3>The Gallery</h3>
+                <p>
+                    "We came in to find the woman we’d been following talking to a much older woman with silver hair, who seemed to be in charge of the place…" (Page 154)<br>
+                    <strong>Explanation:</strong> The gallery’s peaceful and artistic setting contrasts with the clones’ harsh reality, symbolizing hope and identity tied to creativity and self-expression.
+                </p>
+            </div>
+            <!-- Additional sections can be appended here following the same structure -->
         </section>
-    </main>
-    <footer>
-        <p>&copy; 2025 Never Let Me Go Analysis</p>
-    </footer>
-
-    <script>
-        // 关键词高亮功能
-        document.getElementById('search-button').addEventListener('click', function () {
-            const keyword = document.getElementById('search-input').value.trim();
-            const contentElement = document.getElementById('content');
-
-            if (keyword) {
-                // 先移除所有高亮
-                contentElement.innerHTML = contentElement.innerHTML.replace(/<span class="highlight">(.*?)<\/span>/g, '$1');
-
-                // 用关键词添加高亮
-                const regex = new RegExp(`(${keyword})`, 'gi');
-                contentElement.innerHTML = contentElement.innerHTML.replace(regex, '<span class="highlight">$1</span>');
-            }
-        });
-    </script>
+    </div>
 </body>
 </html>
