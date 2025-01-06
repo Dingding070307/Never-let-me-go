@@ -10,7 +10,7 @@
             line-height: 1.6;
             margin: 0;
             padding: 0;
-            background-color: #ffe4e1; /* 粉色背景 */
+            background: linear-gradient(to bottom, #ffdde1, #aec6ff); /* 粉蓝渐变背景 */
             color: #333;
         }
         header {
@@ -25,6 +25,7 @@
             margin: auto;
             background: #fff;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-radius: 8px;
         }
         section {
             margin-bottom: 20px;
@@ -86,16 +87,19 @@
 
         <section id="content">
             <h2>Hailsham</h2>
-            <p>“Hailsham. I bet that was a beautiful place.” (Ishiguro 7)</p>
+            <p><strong>“Hailsham. I bet that was a beautiful place.”</strong> (Ishiguro 7)</p>
             <div class="quote">The donor’s comment reflects how Hailsham is idealized by those who didn’t experience it, contrasting with the students’ complex feelings about their upbringing.</div>
-            <p>“You were at Hailsham, weren’t you? So is it really true?” (Page 200)</p>
+            <p><strong>“You were at Hailsham, weren’t you? So is it really true?”</strong> (Page 200)</p>
             <div class="quote">Rumors about Hailsham closing reveal its symbolic importance as a failed attempt to humanize clones and the lingering effects of its legacy.</div>
-        </section>
 
-        <section>
             <h2>The Pond</h2>
-            <p>“Kath, I’ll tell you about it. I’ll be down at the pond after lunch. If you come down there, I’ll tell you.” (Page 24)</p>
+            <p><strong>“Kath, I’ll tell you about it. I’ll be down at the pond after lunch. If you come down there, I’ll tell you.”</strong> (Page 24)</p>
             <div class="quote">The pond serves as a meeting point for private and meaningful conversations, reflecting the characters’ need for connection and trust.</div>
+
+            <h2>Characters</h2>
+            <h3>Kathy H.</h3>
+            <p><strong>“My name is Kathy H. I’m thirty-one years old, and I’ve been a carer now for over eleven years.”</strong> (Page 4)</p>
+            <div class="quote">Kathy’s introduction highlights her reflective and empathetic personality. Her role as a carer emphasizes her dedication to helping others, while also foreshadowing her eventual fate.</div>
         </section>
     </main>
     <footer>
@@ -104,7 +108,7 @@
 
     <script>
         // 关键词高亮功能
-        document.getElementById('search-button').addEventListener('click', function() {
+        document.getElementById('search-button').addEventListener('click', function () {
             const keyword = document.getElementById('search-input').value.trim();
             const contentElement = document.getElementById('content');
 
